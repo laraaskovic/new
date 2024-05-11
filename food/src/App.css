@@ -1,18 +1,79 @@
+/* Reset default browser styles */
+body, h1, h2, h3, ul, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main app container */
 .app {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 50px;
 }
 
-.camera {
-  margin-bottom: 50px;
+/* Heading styles */
+h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
 }
 
+h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* Camera container */
+.camera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Video feed styles */
+.camera video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Capture button styles */
+.camera button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.camera button:hover {
+  background-color: #0056b3;
+}
+
+/* Montage container */
+.montage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Photo grid styles */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
 }
 
-.photo-grid img {
-  width: 100%;
+/* Photo styles */
+.photo-grid canvas {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
