@@ -18,7 +18,7 @@ const Calendar = ({ photos }) => {
 
   return (
     <div className="calendar">
-      <h2>Photo Calendar</h2>
+      <h2>Photo Calendar!</h2>
       <div className="calendar-grid">
         {renderCalendarDates()}
       </div>
