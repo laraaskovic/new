@@ -1,0 +1,42 @@
+/* Montage container styles */
+.montage {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Montage title styles */
+  .montage h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Montage video container styles */
+  .montage-video {
+    margin-bottom: 20px;
+  }
+  
+  /* Montage buttons styles */
+  .montage-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  .montage-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .montage-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
