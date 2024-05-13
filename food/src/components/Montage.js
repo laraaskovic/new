@@ -10,7 +10,7 @@ const Montage = ({ photos }) => {
     setIsPlaying(true);
     intervalRef.current = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % photos.length);
-    }, 2000); // Change slide every 2 seconds
+    }, 200); // Change slide every 2 seconds
   };
 
   const stopSlideshow = () => {

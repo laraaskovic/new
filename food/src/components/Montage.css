@@ -1,17 +1,43 @@
 /* Montage container styles */
 .montage {
-    background-color: #f8f9fa;
+    background-color: #f0f0f0;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Montage title styles */
   .montage h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
     color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
+  
+  .montage-slides img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .montage-slides img:hover {
+    transform: scale(1.05);
+  }
+  
+  .montage-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .montage-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
   
   /* Montage video container styles */
   .montage-video {
