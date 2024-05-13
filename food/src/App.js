@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="app">
       <header className="header">
-        <h1>Facial Montage Timelapse</h1>
+        <h1>Timewarp</h1>
       </header>
       <main className="main">
         <Camera addPhoto={addPhoto} />

@@ -1,68 +1,60 @@
 /* Montage container styles */
 .montage {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .montage h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .montage-slides img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.montage h2 {
+    color: #333333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.montage-slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.montage-slides img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-  }
-  
-  .montage-slides img:hover {
+}
+
+.montage-slides img:hover {
     transform: scale(1.05);
-  }
-  
-  .montage-buttons button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .montage-buttons button:hover {
-    background-color: #0056b3;
-  }
-  
-  
-  /* Montage video container styles */
-  .montage-video {
-    margin-bottom: 20px;
-  }
-  
-  /* Montage buttons styles */
-  .montage-buttons button {
-    padding: 10px 20px;
+}
+
+.montage-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.montage-buttons button {
+    padding: 12px 24px;
     border: none;
     background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
+    color: #ffffff;
+    font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: 10px;
-  }
-  
-  .montage-buttons button:disabled {
-    background-color: #ccc;
+    outline: none;
+}
+
+.montage-buttons button:disabled {
+    background-color: #cccccc;
     cursor: not-allowed;
-  }
-  
-  .montage-buttons button:hover {
+}
+
+.montage-buttons button:hover {
     background-color: #0056b3;
-  }
-  
+}
