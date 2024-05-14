@@ -1,13 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import './Camera.css'; // Import your CSS file for camera styling
 
 const Camera = ({ addPhoto }) => {
   const videoRef = useRef();
   const canvasRef = useRef();
+  const [isCameraOn, setIsCameraOn] = useState(false);
+  const [photoCount, setPhotoCount] = useState(0);
 
   const startCamera = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
       videoRef.current.srcObject = stream;
+      setIsCameraOn(true);
     } catch (error) {
       console.error('Error accessing webcam:', error);
     }
@@ -26,14 +30,20 @@ const Camera = ({ addPhoto }) => {
 
     const photoData = canvas.toDataURL('image/jpeg');
     addPhoto(photoData);
+    setPhotoCount(prevCount => prevCount + 1); // Increment photo count
   };
 
   return (
-    <div className="camera">
-      <video ref={videoRef} autoPlay playsInline></video>
-      <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
-      <button onClick={capturePhoto}>Capture Photo</button>
-      <button onClick={startCamera}>Start Camera</button>
+    <div className="camera-container">
+      <video className={`camera-video ${isCameraOn ? 'active' : ''}`} ref={videoRef} autoPlay playsInline></video>
+      <canvas className="camera-canvas" ref={canvasRef}></canvas>
+      <div className="camera-buttons">
+        <button className="camera-button" onClick={capturePhoto} disabled={!isCameraOn}>Capture Photo</button>
+        <button className="camera-button" onClick={startCamera} disabled={isCameraOn}>Start Camera</button>
+      </div>
+      <div className="photo-counter">
+        <p>STREAK: {photoCount}</p>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,74 @@
+/* Camera container styles */
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Video feed styles */
+  .camera-video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hide the video by default */
+  }
+  
+  .camera-video.active {
+    opacity: 1; /* Show the video when active */
+  }
+  
+  /* Canvas styles */
+  .camera-canvas {
+    display: none; /* Hide the canvas by default */
+  }
+  
+  /* Buttons container styles */
+  .camera-buttons {
+    margin-top: 20px;
+  }
+  
+  /* Button styles */
+  .camera-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00adb5;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .camera-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .camera-button:hover {
+    background-color: #007d86;
+  }
+  
+  /* Photo counter styles */
+  .photo-counter {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ee8adf;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-counter p {
+    margin: 0;
+  }
+  
+  /* Adjustments for dark mode */
+  .dark-mode .photo-counter {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+  }
+  

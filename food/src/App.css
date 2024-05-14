@@ -3,6 +3,8 @@ body, h1, h2, h3, ul, button {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+
+
 }
 
 /* Main app container */
@@ -10,19 +12,47 @@ body, h1, h2, h3, ul, button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 0px;
+  padding: 0; /* Remove default padding */
+
+  background-color: black;
 }
 
 /* Heading styles */
 h1 {
   margin-bottom: 20px;
   font-size: 36px;
+  color: aliceblue;
 }
 
 h2 {
   margin-bottom: 10px;
   font-size: 24px;
+  color: aliceblue;
+
 }
+
+.logo-container {
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  
+}
+
+
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 300px; /* Adjust width as needed */
+  margin-bottom: 10px;
+}
+
 
 /* Camera container */
 .camera {
@@ -45,7 +75,7 @@ h2 {
   margin-top: 10px;
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: #269c90;
   color: #fff;
   font-size: 16px;
   border-radius: 8px;
@@ -54,7 +84,7 @@ h2 {
 }
 
 .camera button:hover {
-  background-color: #0056b3;
+  background-color: #00adb3;
 }
 
 /* Montage container */

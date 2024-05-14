@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Camera from './components/Camera';
 import Montage from './components/Montage';
-import Calendar from './components/Calendar';
 
 const App = () => {
   const [photos, setPhotos] = useState([]);
@@ -16,15 +15,14 @@ const App = () => {
   return (
     <div className="app">
       <header className="header">
-        <h1>Timewarp</h1>
+      <img src="/images/timewarp (1).png" alt="Logo" />
       </header>
-      <main className="main">
+      <div className="main">
+        
         <Camera addPhoto={addPhoto} />
         <Montage photos={photos} />
-      </main>
-      <footer className="footer">
-        <p>Created with ❤️</p>
-      </footer>
+
+      </div>
     </div>
   );
 };

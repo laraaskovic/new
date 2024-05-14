@@ -1,13 +1,13 @@
 /* Montage container styles */
 .montage {
-    background-color: #ffffff;
+    background-color: #000000;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .montage h2 {
-    color: #333333;
+    color: #c8dbf4;
     font-size: 28px;
     margin-bottom: 30px;
     text-align: center;
@@ -40,7 +40,7 @@
 .montage-buttons button {
     padding: 12px 24px;
     border: none;
-    background-color: #007bff;
+    background-color: #22a3b7;
     color: #ffffff;
     font-size: 18px;
     border-radius: 8px;
@@ -56,5 +56,5 @@
 }
 
 .montage-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #1996af;
 }
