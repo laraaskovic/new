@@ -73,7 +73,7 @@ export default Camera;
 
 
 import React, { useRef, useState } from 'react';
-import './Camera.css'; // Import your CSS  for camera styling
+import './Camera.css';
 
 const Camera = ({ addPhoto }) => {
   const videoRef = useRef();
