@@ -44,6 +44,7 @@ const Montage = ({ photos }) => {
           {isPlaying ? 'Stop Slideshow' : 'Start Slideshow'}
         </button>
       </div>
+
     </div>
   );
 };

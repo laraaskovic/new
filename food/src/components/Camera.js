@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+/*import React, { useRef, useState, useEffect } from 'react';
 import './Camera.css'; // Import your CSS file for camera styling
 import * as faceapi from 'face-api.js';
 
@@ -69,11 +69,11 @@ const Camera = ({ addPhoto }) => {
 };
 
 export default Camera;
+**/
 
 
-
-/*import React, { useRef, useState } from 'react';
-import './Camera.css'; // Import your CSS file for camera styling
+import React, { useRef, useState } from 'react';
+import './Camera.css'; // Import your CSS  for camera styling
 
 const Camera = ({ addPhoto }) => {
   const videoRef = useRef();
@@ -123,4 +123,3 @@ const Camera = ({ addPhoto }) => {
 };
 
 export default Camera;
-*/

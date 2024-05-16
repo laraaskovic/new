@@ -42,7 +42,7 @@
   }
   
   .camera-button:disabled {
-    background-color: #cccccc;
+    background-color: #ffffff;
     cursor: not-allowed;
   }
   
