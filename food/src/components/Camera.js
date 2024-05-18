@@ -105,7 +105,7 @@ const Camera = ({ addPhoto }) => {
 
     const photoData = canvas.toDataURL('image/jpeg');
     addPhoto(photoData);
-    setPhotoCount(prevCount => prevCount + 1); //  count
+    setPhotoCount(prevCount => prevCount + 1);
   };
 
   return (
