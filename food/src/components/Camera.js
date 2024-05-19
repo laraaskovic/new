@@ -70,7 +70,7 @@ const Camera = ({ addPhoto }) => {
 
 export default Camera;
 
-*/
+**/
 
 
 import React, { useRef, useState } from 'react';
