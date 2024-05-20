@@ -95,7 +95,7 @@ const Camera = ({ addPhoto }) => {
   const capturePhoto = () => {
     const video = videoRef.current;
     const canvas = canvasRef.current;
-    const context = canvas.getContext('3d');
+    const context = canvas.getContext('2d');
     const width = video.videoWidth;
     const height = video.videoHeight;
 
