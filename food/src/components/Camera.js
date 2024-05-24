@@ -101,7 +101,7 @@ const Camera = ({ addPhoto }) => {
 
     canvas.width = width;
     canvas.height = height;
-    context.drawImage(video, 0, 1, width, height);
+    context.drawImage(video, 0, 0, width, height);
 
     const photoData = canvas.toDataURL('image/jpeg');
     addPhoto(photoData);
@@ -116,9 +116,7 @@ const Camera = ({ addPhoto }) => {
         <button className="camera-button" onClick={capturePhoto} disabled={!isCameraOn}>Capture Photo</button>
         <button className="camera-button" onClick={startCamera} disabled={isCameraOn}>Start Camera</button>
       </div>
-      <div className="photo-counter">
-        <p>STREAK: {photoCount}</p>
-      </div>
+      
     </div>
   );
 };
