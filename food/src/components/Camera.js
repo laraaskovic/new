@@ -101,7 +101,7 @@ const Camera = ({ addPhoto }) => {
 
     canvas.width = width;
     canvas.height = height;
-    context.drawImage(video, 0, 0, width, height);
+    context.drawImage(video, 0, 1, width, height);
 
     const photoData = canvas.toDataURL('image/jpeg');
     addPhoto(photoData);
