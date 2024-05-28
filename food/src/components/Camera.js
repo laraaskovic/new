@@ -114,7 +114,7 @@ const Camera = ({ addPhoto }) => {
       <canvas className="camera-canvas" ref={canvasRef}></canvas>
       <div className="camera-buttons">
         <button className="camera-button" onClick={capturePhoto} disabled={!isCameraOn}>Capture Photo</button>
-        <button className="camera-button" onClick={startCamera} disabled={isCameraOn}>Startttt Camera</button>
+        <button className="camera-button" onClick={startCamera} disabled={isCameraOn}>Starttt Camera</button>
       </div>
       
     </div>
