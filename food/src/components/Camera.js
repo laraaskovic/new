@@ -80,7 +80,6 @@ const Camera = ({ addPhoto }) => {
   const videoRef = useRef();
   const canvasRef = useRef();
   const [isCameraOn, setIsCameraOn] = useState(false);
-  const [photoCount, setPhotoCount] = useState(0);
 
   const startCamera = async () => {
     try {
@@ -105,7 +104,6 @@ const Camera = ({ addPhoto }) => {
 
     const photoData = canvas.toDataURL('image/jpeg');
     addPhoto(photoData);
-    setPhotoCount(prevCount => prevCount + 1);
   };
 
   return (
