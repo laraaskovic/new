@@ -1,3 +1,4 @@
+
 /*import React, { useRef, useState, useEffect } from 'react';
 import './Camera.css'; // Import your CSS file for camera styling
 import * as faceapi from 'face-api.js';
@@ -71,6 +72,14 @@ const Camera = ({ addPhoto }) => {
 export default Camera;
 
 */
+
+
+
+
+
+
+
+
 
 
 import React, { useRef, useState } from 'react';
