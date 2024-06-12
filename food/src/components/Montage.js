@@ -19,6 +19,7 @@ const Montage = ({ photos }) => {
   };
 
   
+  
   const handleToggleSlideshow = () => {
     if (isPlaying) {
       stopSlideshow();
