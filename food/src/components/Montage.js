@@ -17,6 +17,7 @@ const Montage = ({ photos }) => {
     setIsPlaying(false);
     clearInterval(intervalRef.current);
   };
+  
 
   const handleToggleSlideshow = () => {
     if (isPlaying) {
