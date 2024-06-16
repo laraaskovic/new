@@ -38,6 +38,7 @@ const Montage = ({ photos }) => {
             style={{ display: index === currentIndex ? 'block' : 'none' }}
           />
         ))}
+        
       </div>
       <div className="montage-buttons">
         <button onClick={handleToggleSlideshow}>
