@@ -13,7 +13,6 @@ const Montage = ({ photos }) => {
     }, 200); // Change slide every 2 seconds
   };
 
-  
   const stopSlideshow = () => {
     setIsPlaying(false);
     clearInterval(intervalRef.current);
