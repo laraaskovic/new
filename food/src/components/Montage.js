@@ -25,7 +25,6 @@ const Montage = ({ photos }) => {
       startSlideshow();
     }
   };
-  
 
   return (
     <div className="montage">
