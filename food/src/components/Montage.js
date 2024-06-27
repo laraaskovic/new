@@ -26,6 +26,7 @@ const Montage = ({ photos }) => {
     }
   };
 
+  
   return (
     <div className="montage">
       <h2>Montage</h2>
