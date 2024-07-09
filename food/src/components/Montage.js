@@ -6,6 +6,8 @@ const Montage = ({ photos }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const intervalRef = useRef();
 
+
+  
   const startSlideshow = () => {
     setIsPlaying(true);
     intervalRef.current = setInterval(() => {
