@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './Montage.css';
 
-
 const Montage = ({ photos }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
