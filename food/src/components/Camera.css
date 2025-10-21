@@ -1,74 +1,138 @@
-/* Camera container styles */
 .camera-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(24, 24, 42, 0.95), rgba(59, 32, 80, 0.9));
+  box-shadow: 0 24px 60px rgba(18, 18, 34, 0.35);
+  color: #f2f4ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.camera-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 128, 191, 0.22), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 219, 222, 0.18), transparent 55%);
+  pointer-events: none;
+}
+
+.camera-stage {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: rgba(8, 8, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.1);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.6s ease;
+  transform: scale(1.02);
+}
+
+.camera-video.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.camera-canvas {
+  display: none;
+}
+
+.camera-status {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  background-color: rgba(10, 8, 18, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  max-width: calc(100% - 2rem);
+}
+
+.camera-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.camera-button {
+  flex: 1 1 160px;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  color: #070510;
+  background: linear-gradient(135deg, #ff9ecd, #ffd36b);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease;
+  box-shadow: 0 12px 30px rgba(255, 170, 200, 0.35);
+}
+
+.camera-button:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(255, 170, 200, 0.45);
+}
+
+.camera-button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.99);
+}
+
+.camera-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+.camera-button.secondary {
+  background: linear-gradient(135deg, rgba(100, 227, 255, 0.85), rgba(156, 188, 255, 0.85));
+  color: #061023;
+  box-shadow: 0 12px 30px rgba(126, 190, 255, 0.35);
+}
+
+.camera-button.ghost {
+  background: rgba(8, 8, 25, 0.35);
+  color: #f2f4ff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+
+.camera-button.ghost:hover:not(:disabled) {
+  background: rgba(8, 8, 25, 0.5);
+}
+
+@media (max-width: 600px) {
+  .camera-container {
+    padding: 1.5rem;
+    border-radius: 18px;
   }
-  
-  /* Video feed styles */
-  .camera-video {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    transition: opacity 0.3s ease;
-    opacity: 0; /* Hide the video by default */
+
+  .camera-stage {
+    border-radius: 16px;
   }
-  
-  .camera-video.active {
-    opacity: 1; /* Show the video when active */
-  }
-  
-  /* Canvas styles */
-  .camera-canvas {
-    display: none; /* Hide the canvas by default */
-  }
-  
-  /* Buttons container styles */
-  .camera-buttons {
-    margin-top: 20px;
-  }
-  
-  /* Button styles */
+
   .camera-button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #00adb5;
-    color: #ffffff;
-    font-size: 16px;
-    cursor: pointer;
+    flex: 1 1 100%;
   }
-  
-  .camera-button:disabled {
-    background-color: #ffffff;
-    cursor: not-allowed;
-  }
-  
-  .camera-button:hover {
-    background-color: #007d86;
-  }
-  
-  /* Photo counter styles */
-  .photo-counter {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #ee8adf;
-    font-size: 26px;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .photo-counter p {
-    margin: 0;
-  }
-  
-  /* Adjustments for dark mode */
-  .dark-mode .photo-counter {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-  }
-  
+}

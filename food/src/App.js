@@ -23,6 +23,7 @@ const App = () => {
     <div className="app">
       <header className="header">
         <img src="/images/timewarp (1).png" alt="Logo" />
+        <p className="header-tagline">Daily reminders. Instant alignment. Effortless glow-up.</p>
       </header>
       <div className="main">
         <Camera addPhoto={addPhoto} />

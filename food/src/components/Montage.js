@@ -35,10 +35,14 @@ const Montage = ({ photos }) => {
             key={index}
             src={photo}
             alt={`Slide ${index + 1}`}
-            style={{ display: index === currentIndex ? 'block' : 'none' }}
+            className={`montage-slide ${index === currentIndex ? 'visible' : ''}`}
           />
         ))}
-        
+        {!photos.length && (
+          <div className="montage-placeholder">
+            Bring your face into frame and capture to see the glow-up.
+          </div>
+        )}
       </div>
       <div className="montage-buttons">
         <button onClick={handleToggleSlideshow}>

@@ -1,60 +1,53 @@
-/* Montage container styles */
 .montage {
-    background-color: #000000;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .montage h2 {
-    color: #c8dbf4;
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.66);
 }
 
 .montage-slides {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.montage-slides img {
-    width: 80%;
-    max-width: 500px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.montage-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
 }
 
-.montage-slides img:hover {
-    transform: scale(1.05);
+.montage-slide.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.montage-buttons {
-    display: flex;
-    justify-content: center;
+.montage-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
 }
 
 .montage-buttons button {
-    padding: 12px 24px;
-    border: none;
-    background-color: #22a3b7;
-    color: #ffffff;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
-    outline: none;
-}
-
-.montage-buttons button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-.montage-buttons button:hover {
-    background-color: #1996af;
+  font-family: inherit;
 }
