@@ -46,7 +46,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-
 .camera-buttons {
   display: flex;
   gap: 0.75rem;

@@ -39,7 +39,6 @@ const Camera = ({ addPhoto }) => {
     };
 
     loadFaceApiModels();
-
     return () => {
       cancelled = true;
     };
