@@ -47,9 +47,9 @@ const Camera = ({ addPhoto }) => {
   const startCamera = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      // if (videoRef.current) {
-      //   videoRef.current.srcObject = stream;
-      // }
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+      }
       setIsCameraOn(true);
       setStatusMessage(modelState === 'ready'
         ? 'Keep your face centred and tap capture.'
