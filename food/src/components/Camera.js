@@ -39,17 +39,17 @@ const Camera = ({ addPhoto }) => {
     };
 
     loadFaceApiModels();
-    return () => {
-      cancelled = true;
-    };
+    // return () => {
+    //   cancelled = true;
+    // };
   }, []);
 
   const startCamera = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-      }
+      // if (videoRef.current) {
+      //   videoRef.current.srcObject = stream;
+      // }
       setIsCameraOn(true);
       setStatusMessage(modelState === 'ready'
         ? 'Keep your face centred and tap capture.'
