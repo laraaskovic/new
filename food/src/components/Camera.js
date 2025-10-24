@@ -39,9 +39,9 @@ const Camera = ({ addPhoto }) => {
     };
 
     loadFaceApiModels();
-    // return () => {
-    //   cancelled = true;
-    // };
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const startCamera = async () => {
