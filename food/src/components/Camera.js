@@ -12,7 +12,7 @@ const Camera = ({ addPhoto }) => {
   const [isCameraOn, setIsCameraOn] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [statusMessage, setStatusMessage] = useState('Initialising face aligner...');
-  const [modelState, setModelState] = useState('loading'); // loading | ready | error
+  const [modelState, setModelState] = useState('loading');
 
   useEffect(() => {
     let cancelled = false;
