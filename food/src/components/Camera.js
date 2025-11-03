@@ -126,6 +126,7 @@ const Camera = ({ addPhoto }) => {
       y: total.y / points.length
     };
   };
+  
 
   const computeRotationAngle = (landmarks) => {
     if (!landmarks) {
